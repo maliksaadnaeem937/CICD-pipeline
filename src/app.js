@@ -11,6 +11,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("CI/CD Node API is running 🚀");
 });
+// CI retrigger test
 
 app.use("/api", userRoutes);
 
