@@ -1,4 +1,4 @@
-````md
+````
 # 🚀 CI/CD Node.js App (Docker + GitHub Actions)
 
 This project demonstrates a **Continuous Integration (CI) pipeline** for a Node.js application using Docker and GitHub Actions.
