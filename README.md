@@ -1,10 +1,9 @@
-
-```md
+````md
 # 🚀 CI/CD Node.js App (Docker + GitHub Actions)
 
 This project demonstrates a **Continuous Integration (CI) pipeline** for a Node.js application using Docker and GitHub Actions.
 
-It automatically builds and pushes a Docker image to Docker Hub on every push to the main branch.
+It automatically builds and pushes a Docker image to Docker Hub on every push to the `main` branch.
 
 ---
 
@@ -24,7 +23,7 @@ This project currently includes **CI (Continuous Integration) only**.
 
 It does NOT include automatic deployment (CD) yet.
 
-Deployment can be added later using services like:
+Deployment can be added later using:
 - Render
 - AWS EC2
 - Kubernetes
@@ -34,8 +33,7 @@ Deployment can be added later using services like:
 
 # 🏗️ Project Structure
 
-```
-
+```text
 ci-cd-node-app/
 │
 ├── src/
@@ -46,26 +44,26 @@ ci-cd-node-app/
 │   ├── app.js
 │   └── server.js
 │
-├── .github/workflows/
-│   └── docker-ci.yml
+├── .github/
+│   └── workflows/
+│       └── docker-ci.yml
 │
 ├── Dockerfile
 ├── package.json
 ├── .gitignore
 ├── .env
 └── README.md
-
 ````
 
 ---
 
 # ⚙️ Tech Stack
 
-- Node.js
-- Express.js
-- Docker
-- GitHub Actions
-- Docker Hub
+* Node.js
+* Express.js
+* Docker
+* GitHub Actions
+* Docker Hub
 
 ---
 
@@ -75,11 +73,11 @@ ci-cd-node-app/
 
 ```http
 GET /
-````
+```
 
 Response:
 
-```
+```text
 CI/CD Node API is running 🚀
 ```
 
@@ -126,7 +124,7 @@ docker run -p 3000:3000 ci-cd-node-app
 
 App runs at:
 
-```
+```text
 http://localhost:3000
 ```
 
@@ -144,7 +142,7 @@ Code Push → GitHub Actions → Build Docker Image → Push to Docker Hub
 
 ## Workflow File
 
-```
+```text
 .github/workflows/docker-ci.yml
 ```
 
@@ -155,20 +153,20 @@ Code Push → GitHub Actions → Build Docker Image → Push to Docker Hub
 1. Checkout repository
 2. Login to Docker Hub
 3. Build Docker image
-4. Push image to Docker Hub
+4. Push Docker image to Docker Hub
 
 ---
 
 # 🔐 GitHub Secrets Required
 
-```
+```text
 DOCKER_USERNAME = your-dockerhub-username
 DOCKER_PASSWORD = your-dockerhub-token
 ```
 
 ---
 
-# 📦 Docker Image Output
+# 📦 Docker Image Usage
 
 After successful CI run:
 
@@ -180,7 +178,7 @@ docker pull your-username/ci-cd-node-app:latest
 
 # 📊 CI Flow Diagram
 
-```
+```text
 Developer
    ↓ git push
 GitHub Repository
@@ -210,7 +208,7 @@ Planned upgrades:
 * Deploy to Render / AWS / VPS
 * Add automatic deployment (CD)
 * Add test automation (Jest)
-* Add staging + production environments
+* Add staging & production environments
 * Add versioned Docker tags
 * Add rollback system
 
@@ -218,31 +216,25 @@ Planned upgrades:
 
 # 👨‍💻 Author
 
-Saad
+**Saad**
 Learning CI/CD & DevOps Fundamentals 🚀
 
-````
-
 ---
 
-# 🧠 Key thing you learned here
+# 🧠 Key Concept
 
-You now understand a very important DevOps concept:
+You now understand:
 
 ### ✔ CI = Build + Test + Package
+
 ### ❌ CD = Deploy to server
 
-Right now you built:
+Current status:
 
 ```text
-✔ CI (complete)
-❌ CD (not yet)
-````
+✔ CI completed
+❌ CD not implemented yet
+```
 
----
 
-If you want next step, I can upgrade you to:
 
-### 🔥 “Add real CD (auto deploy to Render from Docker Hub)”
-
-That will make this a **full production pipeline used in companies**.
